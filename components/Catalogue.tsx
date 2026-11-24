@@ -9,16 +9,21 @@ const selection = {
     intro: "기린 이치방 생맥주",
     products: [
       { name: "기린 후레시 나마비루", image: "/images/kirin-fresh.webp" },
-      { name: "기린 아이스 나마비루", image: "/images/kirin-ice.webp" },
+      { name: "기린 아이스 나마비루", image: "/images/kirin-ice.png" },
       { name: "기린 프로즌 나마비루", image: "/images/kirin-frozen.webp" },
+      { name: "기린 토마토 비어볼", image: "/images/kirin-tomato.png" },
+      { name: "기린 레몬유자 비어볼", image: "/images/kirin-yuzu.webp" },
     ],
   },
   asahi: {
     logo: "/images/asahi-white.webp",
     intro: "아사히 슈퍼드라이 생맥주",
     products: [
-      { name: "아사히 후레시 나마비루", image: "/images/asahi-fresh.webp" },
+      { name: "아사히 후레시 나마비루", image: "/images/asahi-fresh.png" },
       { name: "아사히 블랙 후레시 나마비루", image: "/images/asahi-dark.webp" },
+      { name: "아사히 아이스 나마비루", image: "/images/asahi-ice.webp" },
+      { name: "아사히 블랙 아이스 나마비루", image: "/images/asahi-blackice.png" },
+      { name: "아사히 레몬유자 비어볼", image: "/images/asahi-beerball.png" },
     ],
   },
 };
