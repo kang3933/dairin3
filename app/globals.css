@@ -119,7 +119,15 @@ h3{font-size:clamp(21px,2.1vw,32px)}
 .beer-hero::before{background:linear-gradient(90deg,#0806058a 0%,#08060545 35%,transparent 65%),linear-gradient(0deg,#0006,transparent 42%)}
 .food-hero{background:#18100a url("/images/food-hero.webp") center center/cover no-repeat}
 .food-hero::before{background:linear-gradient(0deg,#000d,#0003 67%),linear-gradient(90deg,#0003,transparent 75%)}
-.branches-hero{min-block-size:calc(var(--hero-height) * .66);align-items:center}
+.branches-hero {
+  min-block-size: calc(var(--hero-height) * .66);
+  align-items: center;
+}
+
+.branches-hero::before {
+  background: url("/images/branchbg.png") center / contain no-repeat;
+  opacity: .3;
+}
 .franchise-hero{min-block-size:calc(var(--hero-height) * .8);background:#120903 url("/images/pub-night.webp") center 45%/cover}
 .franchise-hero::before{background:linear-gradient(90deg,#000e,#0005),linear-gradient(0deg,#0009,transparent)}
 .catalogue{background:var(--panel)}
@@ -171,15 +179,19 @@ h3{font-size:clamp(21px,2.1vw,32px)}
 
 .branch-search{margin-top:clamp(19px,2.4vw,34px)}
 .branch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,28px);row-gap:clamp(26px,4vw,57px);margin-top:clamp(35px,4.2vw,60px)}
-.branch-card{border:0;padding:0;text-align:left;display:grid;grid-template-columns:minmax(max-content,1fr) minmax(0,1fr);aspect-ratio:1.05;background:var(--card);border-radius:5px;overflow:hidden}
-.branch-card-copy{display:flex;flex-direction:column;align-items:start;gap:clamp(6px,1.05vw,15px);padding:clamp(10px,1.65vw,24px) 6px 12px clamp(10px,1.65vw,24px);white-space:nowrap}
-.branch-card-visual{position:relative;min-width:0;height:86%;align-self:center;overflow:hidden}
-.branch-art{position:absolute;inset:0;width:130%;height:100%;max-width:none;object-fit:contain;object-position:left center;transition:transform .24s}
-.branch-card:hover .branch-art{transform:translateX(-3px)}
-.branch-card-visual > svg{position:absolute;bottom:8%;right:8%;color:#e2a431;opacity:.27;max-width:66%;max-height:52%}
+.branch-card{container:branch-card / inline-size;display:flex;flex-direction:column;min-width:0;border:0;padding:0;background:transparent;text-align:left}
+.branch-card-visual{position:relative;display:grid;place-items:center;aspect-ratio:1.05;background:var(--card);border-radius:5px;overflow:hidden}
+.branch-art{position:absolute;inset:7% 8%;width:84%;height:86%;object-fit:contain;transition:transform .24s}
+.branch-card:hover .branch-art{transform:scale(1.025)}
+.branch-card-visual > svg{width:min(108px,44%);height:auto;color:#e2a431;opacity:.27}
+.branch-card-copy{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:4px clamp(6px,1vw,10px);padding-top:6px}
 .region-label{color:var(--yellow);line-height:1.25;font-size:clamp(10px,.85vw,13px);padding:.34em .56em;border:1px solid #dbab1c;border-radius:2px}
-.branch-name{font-size:clamp(15px,1.78vw,26px);font-weight:800;letter-spacing:-.045em;line-height:1.15}
-.branch-cta{font-size:clamp(10px,.9vw,13px)}
+.branch-name{font-size:clamp(15px,1.78vw,24px);font-weight:800;letter-spacing:-.045em;line-height:1.15;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.branch-cta{font-size:clamp(10px,.9vw,13px);white-space:nowrap}
+@container branch-card (max-width:178px){
+  .branch-card-copy{grid-template-columns:auto minmax(0,1fr)}
+  .branch-cta{grid-column:1 / -1;justify-self:end}
+}
 .detail-dialog{border:1px solid #4a4a4a;padding:0;margin:auto;border-radius:12px;width:min(550px,calc(100% - 32px));max-height:calc(100dvh - 36px);background:#191919;color:#fff}
 .detail-dialog::backdrop{background:#000b}
 .dialog-inner{position:relative}
@@ -309,7 +321,6 @@ h3{font-size:clamp(21px,2.1vw,32px)}
   .food-card-image{aspect-ratio:1.02}
   .filters button{padding-inline:13px;min-height:40px}
   .branch-grid{gap:19px 13px}
-  .branch-card{aspect-ratio:.96}
   .branch-name{font-size:clamp(13px,3.85vw,20px)}
   .about-hero-grid,.about-grid{grid-template-columns:minmax(0,1fr);gap:clamp(12px,3.7vh,26px)}
   .about-hero-copy{grid-row:2}
@@ -341,4 +352,68 @@ h3{font-size:clamp(21px,2.1vw,32px)}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+
+.branch-card {
+  display: block;
+  width: 100%;
+  align-self: start;
+}
+
+.branch-card-visual,
+.branch-card-copy {
+  width: 100%;
+}
+
+.branch-card-visual {
+  aspect-ratio: 1.04;
+}
+
+
+/* 영상과 포스터의 색감 */
+.main-hero-media video,
+.main-hero-media .video-poster img {
+  filter: saturate(.8) contrast(1.08) sepia(.12);
+}
+
+/* 고정 주사선 + 움직이는 신호 띠 */
+.main-hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 3px,
+      rgb(0 0 0 / 16%) 3px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgb(255 255 255 / 20%) 46%,
+      rgb(0 0 0 / 22%) 52%,
+      transparent
+    ) center -36px / 100% 32px no-repeat;
+}
+
+/* 기존 어두운 그라데이션을 효과 위에 유지 */
+.main-hero-media::after {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .main-hero-media:has(video.video-playing)::before {
+    animation: hero-vhs-tracking 7s steps(12, end) infinite;
+  }
+}
+
+@keyframes hero-vhs-tracking {
+  0%, 86% {
+    background-position: 0 0, center -36px;
+  }
+  100% {
+    background-position: 0 0, center calc(100% + 36px);
+  }
 }

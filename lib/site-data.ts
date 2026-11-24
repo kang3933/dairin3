@@ -11,16 +11,16 @@ export type Branch = {
 };
 // 실제 지점별 자료를 확인한 뒤 입력하세요. 브랜드 공간 사진은 지점 사진으로 사용하지 않습니다.
 const locations: Array<Omit<Branch, "address" | "hours" | "phone" | "images"> & Partial<Pick<Branch, "address" | "images">>> = [
-  { id: "magok", name: "마곡점", region: "서울", area: "강서구 마곡", address: "서울 강서구 마곡중앙6로 66, 퀸즈파크텐 B동 1층 120호", images: ["/images/magok-front.webp"] },
-  { id: "the-black", name: "남포점 · The Black", cardName: "남포점", region: "부산", area: "중구 남포", address: "부산 중구 광복로 9", images: ["/images/black-front.webp", "/images/black-angle.webp"] },
-  { id: "myeongji", name: "명지점", region: "부산", area: "강서구 명지", address: "부산 강서구 명지국제2로28번길 7, 1층 108호", images: ["/images/myeongji-front.webp", "/images/myeongji-2.webp"] },
-  { id: "seomyeon", name: "서면점", region: "부산", area: "부산진구" },
-  { id: "gwangan", name: "광안점", region: "부산", area: "수영구 광안", images: ["/images/gwangan-front.webp"] },
-  { id: "gwangan-2", name: "광안 2호점", region: "부산", area: "수영구 광안", images: ["/images/gwangan-2.webp"] },
-  { id: "dongnae", name: "동래점", region: "부산", area: "동래구" },
-  { id: "buldang", name: "불당점", region: "충남", area: "천안 불당", images: ["/images/buldang-front.webp"] },
-  { id: "jeonju", name: "웨리단길점", region: "전북", area: "전주 웨리단길", images: ["/images/jeonju-front.webp"] },
-  { id: "yulha", name: "율하점", region: "경남", area: "김해 율하", images: ["/images/yulha-front.webp"] },
+  { id: "magok", name: "마곡사단", region: "서울", area: "강서구 마곡", address: "서울 강서구 마곡중앙6로 66, 퀸즈파크텐 B동 1층 120호", images: ["/images/magok-front.webp"] },
+  { id: "the-black", name: "남포점 · The Black", cardName: "남포사단", region: "부산", area: "중구 남포", address: "부산 중구 광복로 9", images: ["/images/black-front.webp", "/images/black-angle.webp"] },
+  { id: "myeongji", name: "명지사단", region: "부산", area: "강서구 명지", address: "부산 강서구 명지국제2로28번길 7, 1층 108호", images: ["/images/myeongji-front.webp", "/images/myeongji-2.webp"] },
+  { id: "seomyeon", name: "서면사단", region: "부산", area: "부산진구", images: ["/images/seomyeon2.png"] },
+  { id: "gwangan", name: "광안사단1", region: "부산", area: "수영구 광안", images: ["/images/gwangan-front.webp"] },
+  { id: "gwangan-2", name: "광안사단2", region: "부산", area: "수영구 광안", images: ["/images/gwangan-2.webp"] },
+  { id: "dongnae", name: "동래사단", region: "부산", area: "동래구" },
+  { id: "buldang", name: "불당사단", region: "충남", area: "천안 불당", images: ["/images/buldang.png"] },
+  { id: "jeonju", name: "웨리단길사단", region: "전북", area: "전주 웨리단길", images: ["/images/jeonju-front.webp"] },
+  { id: "yulha", name: "율하사단", region: "경남", area: "김해 율하", images: ["/images/yulha-front.webp"] },
 ];
 
 export const branches: Branch[] = locations.map((branch) => ({

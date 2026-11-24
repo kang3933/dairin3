@@ -31,16 +31,27 @@ export default function BranchDirectory() {
     <p className="sr-only" aria-live="polite">{visible.length}개 지점</p>
     {!visible.length && <div className="empty"><p>일치하는 지점이 없어요.</p><button className="button" onClick={() => { setQuery(""); setRegion("전체"); }}>전체 지점 보기</button></div>}
     <div className="branch-grid">
-      {visible.map((branch) => <button className="branch-card" type="button" key={branch.id} aria-haspopup="dialog" aria-label={`${branch.name} 지점 정보 보기`} onClick={() => { setPhoto(0); setActive(branch); }}>
-        <span className="branch-card-copy">
-          <span className="region-label">{branch.region}</span>
-          <span className="branch-name">{branch.cardName ?? branch.name}</span>
-          <span className="branch-cta">지점 정보 보기</span>
-        </span>
-        <span className="branch-card-visual" aria-hidden="true">
-          {branch.images.length > 0 ? <img className="branch-art" src={branch.images[0]} alt="" loading="lazy" decoding="async" /> : <Icon name="pin" size={108} />}
-        </span>
-      </button>)}
+      {visible.map((branch) => (
+        <button
+          className="branch-card"
+          type="button"
+          key={branch.id}
+          aria-haspopup="dialog"
+          aria-label={`${branch.name} 지점 정보 보기`}
+          onClick={() => { setPhoto(0); setActive(branch); }}
+        >
+          <span className="branch-card-visual" aria-hidden="true">
+            {branch.images.length > 0 ? (
+              <img className="branch-art" src={branch.images[0]} alt="" loading="lazy" decoding="async" />
+            ) : <Icon name="pin" size={108} />}
+          </span>
+          <span className="branch-card-copy">
+            <span className="region-label">{branch.region}</span>
+            <span className="branch-name">{branch.cardName ?? branch.name}</span>
+            <span className="branch-cta">지점 정보 보기</span>
+          </span>
+        </button>
+      ))}
     </div>
     <Dialog open={Boolean(active)} onClose={() => setActive(null)} labelledBy="branch-detail-title">
       {active && <>
