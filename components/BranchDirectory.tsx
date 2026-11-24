@@ -23,7 +23,7 @@ export default function BranchDirectory() {
   }
 
   return <>
-    <h2>어느 동네에서 만나볼까요?</h2>
+    <h2>우리 동네 다이린</h2>
     <label className="search branch-search"><Icon name="search" size={17} /><span className="sr-only">지역 또는 지점명 검색</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="지역 또는 지점명 검색" /></label>
     <div className="filters" role="group" aria-label="지역 선택">
       {regions.map((item) => <button type="button" key={item} aria-pressed={item === region} onClick={() => setRegion(item)}>{item} <span>{item === "전체" ? branches.length : branches.filter((branch) => branch.region === item).length}</span></button>)}

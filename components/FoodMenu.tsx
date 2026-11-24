@@ -24,7 +24,7 @@ export default function FoodMenu() {
 
   return <>
     <div className="listing-heading">
-      <div><p className="eyebrow">FOOD MENU</p><h2>오늘은 어떤 한 접시?</h2></div>
+      <div><p className="eyebrow">FOOD MENU</p><h2>한 잔을 완성할 한 입.</h2></div>
       <label className="search"><Icon name="search" size={17} /><span className="sr-only">메뉴 이름 검색</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="메뉴 이름 검색" /></label>
     </div>
     <div className="filters food-filters" role="group" aria-label="안주 종류">
