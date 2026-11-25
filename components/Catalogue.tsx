@@ -10,7 +10,7 @@ const selection = {
     products: [
       { name: "기린 후레시 나마비루", image: "/images/kirin-fresh.webp" },
       { name: "기린 아이스 나마비루", image: "/images/kirin-ice.png" },
-      { name: "기린 프로즌 나마비루", image: "/images/kirin-frozen.webp" },
+      { name: "기린 프로즌 나마비루", image: "/images/kirin-frozen.png" },
       { name: "기린 토마토 비어볼", image: "/images/kirin-tomato.png" },
       { name: "기린 레몬유자 비어볼", image: "/images/kirin-yuzu.webp" },
     ],
