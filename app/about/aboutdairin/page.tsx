@@ -21,6 +21,12 @@ export default function AboutPage() {
       </div>
     </section>
     <section className="about-overview section-pad">
+      <InlineVideo
+        src="/videos/beer-loop.webm"
+        poster="/images/beer-hero2.png"
+        label="맥주 기포 배경 영상"
+        className="about-overview-media"
+      />
       <div className="shell about-grid">
         <div>
           <p className="eyebrow about-label">BRAND STORY &amp; OVERVIEW</p>
@@ -46,14 +52,21 @@ export default function AboutPage() {
         </ol>
       </div>
     </section>
-    <section className="about-business section-pad">
-      <div className="shell about-grid">
+    <section className="about-business">
+      <img
+        className="about-business-image"
+        src="/images/business-model2.png"
+        alt="두 가지 맥주 베이스, 매장 직배송, 첫 오픈 거품 활용을 보여주는 다이린 바"
+        width={1884}
+        height={1060}
+        loading="lazy"
+      />
+      <div className="shell about-grid about-business-copy">
         <div>
           <p className="eyebrow about-label">BUSINESS MODEL</p>
           <h2>작은 디테일이<br />큰 차이를 만듭니다.</h2>
           <p>제조사에서 매장으로 이어지는 직배송과 두 가지 생맥주 베이스. 케그를 처음 열 때 나온 거품도 메뉴에 활용하며, 매장 운영의 기본부터 효율을 생각합니다.</p>
         </div>
-        <img src="/images/business-model.webp" alt="두 가지 맥주 베이스, 매장 직배송, 첫 오픈 거품 활용을 보여주는 다이린 바" width="1884" height="1060" loading="lazy" />
       </div>
     </section>
     <section className="about-vision section-pad">
