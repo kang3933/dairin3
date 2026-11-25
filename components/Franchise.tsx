@@ -42,7 +42,7 @@ export default function Franchise() {
       </tbody></table>
       <p className="catalog-note">임대 보증금·권리금 등 별도 비용은 매장별로 확인해 주세요.</p>
     </div></section>
-    <section className="catalogue section-pad"><div className="shell">
+    <section className="catalogue section-pad opening-catalogue"><div className="shell">
       <h2>개설 절차</h2>
       <ol className="opening-steps">
         {["희망 지역과 운영 계획 상담", "상권과 매장 검토", "인테리어와 설비 준비", "운영 교육과 오픈"].map((step) => <li key={step}>{step}</li>)}

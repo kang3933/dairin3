@@ -7,7 +7,7 @@ export const metadata = { title: "맥주 메뉴" };
 export default function BeerPage() {
   return <>
     <PhotoHero className="beer-hero" label="A better glass of beer." title={<>시원함이 다르다,<br />다이린 생맥주.</>} description="첫 모금부터 마지막 한 잔까지, 오늘의 맥주를 만나보세요." />
-    <section className="catalogue section-pad">
+    <section className="catalogue section-pad beer-catalogue">
       <div className="shell">
         <div className="catalogue-heading">
           <p className="eyebrow">Two beers, endless possibilities.</p>
