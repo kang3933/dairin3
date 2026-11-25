@@ -35,7 +35,7 @@ export default function AboutPage() {
           <p>일본 본토의 생맥주를 주력으로 선보이며, 만원 초반대의 합리적인 가격대 안주 메뉴 라인업을 구축하여 남녀노소 누구나 부담 없이 방문할 수 있는 트렌디한 공간을 제공합니다.</p>
         </div>
         <div className="about-photos">
-          <img src="/images/pour-poster.webp" alt="다이린에서 따르는 한 잔의 기린 생맥주" loading="lazy" />
+          <img src="/images/pour-beer.jpg" alt="다이린에서 따르는 한 잔의 기린 생맥주" loading="lazy" />
           <img src="/images/pub-room.webp" alt="따뜻한 조명의 다이린 매장 내부" loading="lazy" />
         </div>
       </div>
