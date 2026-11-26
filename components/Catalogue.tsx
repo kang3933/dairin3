@@ -5,7 +5,7 @@ import { Icon } from "./Icon";
 
 const selection = {
   kirin: {
-    logo: "/images/kirinwhite.png",
+    logo: "/images/kirincolourlogo.png",
     intro: "기린 이치방 생맥주",
     products: [
       { name: "기린 후레시 나마비루", image: "/images/kirin-fresh.webp" },
