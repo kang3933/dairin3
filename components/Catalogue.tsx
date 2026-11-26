@@ -23,6 +23,7 @@ const selection = {
       { name: "아사히 블랙 후레시 나마비루", image: "/images/asahi-dark.webp" },
       { name: "아사히 아이스 나마비루", image: "/images/asahi-ice.webp" },
       { name: "아사히 블랙 아이스 나마비루", image: "/images/asahi-blackice.png" },
+      { name: "아사히 토마토 비어볼", image: "/images/asahitomato.png" },
       { name: "아사히 레몬유자 비어볼", image: "/images/asahi-beerball.png" },
     ],
   },
