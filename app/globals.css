@@ -463,36 +463,36 @@ h3{font-size:clamp(21px,2.1vw,32px)}
 .about-history {
   background:
     linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 75%)),
-    url("/images/bgdarker.png") center / cover no-repeat;
+    url("/images/bglighter.png") center / cover no-repeat;
 }
 
 .catalogue.beer-catalogue {
   background:
     linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 80%)),
-    url("/images/bgdarker.png") center / cover no-repeat;
+    url("/images/bglighter.png") center / cover no-repeat;
 }
 
 .catalogue.food-catalogue {
   background:
     linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)),
-    url("/images/bgdarker.png") center top / 100% auto repeat-y;
+    url("/images/bglighter.png") center top / 100% auto repeat-y;
 }
 
 .catalogue.branch-catalogue {
   background:
     linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)),
-    url("/images/bgdarker.png") center top / 100% auto repeat-y;
+    url("/images/bglighter.png") center top / 100% auto repeat-y;
 }
 
 #strengths {
   background:
     linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 70%)),
-    url("/images/bgdarker.png") center / cover no-repeat;
+    url("/images/bglighter.png") center / cover no-repeat;
 }
 
 .catalogue.opening-catalogue {
   background:
     linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 75%)),
-    url("/images/bgdarker.png") center / cover no-repeat;
+    url("/images/bglighter.png") center / cover no-repeat;
 }
 
