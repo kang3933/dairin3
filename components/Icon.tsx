@@ -16,6 +16,20 @@ const paths: Record<string, ReactNode> = {
   beer: <><path d="M5 7h12v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2ZM17 10h4v5a2 2 0 0 1-2 2h-2M5 7a3 3 0 0 1 4-3 3 3 0 0 1 5 0 3 3 0 0 1 3 3M9 11v6m4-6v6"/></>,
   check: <path d="m4 13 5 5L20 7"/>,
   mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></>,
+  instagram: (
+  <>
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </>
+  ),
+  headset: (
+    <>
+      <path d="M4 13v-2a8 8 0 1 1 16 0v2M20 17v1a3 3 0 0 1-3 3h-4" />
+      <rect x="3" y="11" width="4" height="7" rx="2" />
+      <rect x="17" y="11" width="4" height="7" rx="2" />
+    </>
+  ),
   plus: <><path d="M5 12h14M12 5v14"/></>,
 };
 
